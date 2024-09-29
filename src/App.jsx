@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 import { RiLoader2Fill } from "react-icons/ri";
 import { conf } from './conf/conf';
+import { HiSpeakerXMark } from "react-icons/hi2";
+
 
 
 
@@ -34,7 +36,7 @@ const App = () => {
 
     try {
       const response = await axios.request(options);
-      // console.log(response.data);
+      console.log(response.data);
       setData(response.data)
       setLoading(false)
     } catch (error) {
@@ -65,7 +67,7 @@ const App = () => {
                 <div className="">
                   <ul>
                     <li className='w-full flex justify-between items-center px-2 py-1 mb-2 border-b-[1px] border-t-[1px] border-slate-300 rounded-md '>
-                      <h2 className='capitalize'>{link.mimeType.split(";")[0]} </h2>
+                      <h2 className='capitalize flex items-center gap-2'>{link.mimeType.split(";")[0]} {link.audioCodec === null && <HiSpeakerXMark/>} </h2>
                       <h2 className='capitalize'>{link.qualityLabel}</h2>
                       <a href={link.link} target='_blank' className='rounded-md bg-blue-600 hover:bg-blue-700 shadow-md w-fit px-4 py-1'>Download</a>
                     </li>
