@@ -73,7 +73,7 @@ const App = () => {
       <h1 className='text-center h-fit text-xl md:text-3xl font-bold mb-10'>Youtube Video Downloader</h1>
       <form onSubmit={handleSubmit} className='w-full h-fit flex flex-col items-center gap-2 '>
         <div className="px-2 py-1 rounded-md border-[1px] border-slate-900 shadow-lg flex items-center gap-2">
-          <input type="text" value={URL} onChange={(e) => setURL(e.target.value)} placeholder="YouTube Video URL . . ." className='border-none outline-none text-slate-900 bg-transparent w-[300px] md:w-[350px] placeholder:text-slate-900 font-semibold' />
+          <input type="text" value={URL} onChange={(e) => setURL(e.target.value)} placeholder="YouTube Video URL . . ." className='border-none outline-none text-slate-900 bg-transparent w-[250px] md:w-[350px] placeholder:text-slate-900 font-semibold' />
           <button type='button' onClick={handleReset} className='bg-slate-300 hover:bg-slate-300/70 p-1 rounded-md'>
             <VscDebugRestart style={{transform: `rotate(-${rotateAngle}deg)`,  transition: 'transform 0.3s ease' }} className='text-xl ' />
           </button>
